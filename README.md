@@ -1,2 +1,2 @@
-# Instalaciones-el-ctricas
+# Instalaciones-electricas
 Módulo Formativo MF1180
