@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MF1180 - Organización y Gestión del Montaje de Instalaciones Eléctricas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Ruta de Aprendizaje: Módulo Formativo MF1180</h1>
+        <p>Organización y gestión del montaje de las instalaciones eléctricas en el entorno de edificios y con fines especiales</p>
+    </header>
+
+    <!-- Barra de búsqueda flotante -->
+    <div class="search-container-floating">
+        <input type="text" id="searchInput" placeholder="Buscar término..." oninput="searchTerms()">
+    </div>
+
+    <!-- Sección de Tarjetas Resumen (Ideas Principales) -->
+    <main class="dashboard-container">
+        
+        <div class="card">
+            <span class="badge">Tema 1</span>
+            <h3>Documentación Técnica y Normativa</h3>
+            <p>Marco regulatorio básico aplicable en España para la tramitación de instalaciones.</p>
+            <ul class="key-skills">
+                <li><a href="#rebt-normativa">Reglamento Electrotécnico de Baja Tensión (REBT 2002)</a></li>
+                <li><a href="#itc-bt-04">Instrucción Técnica Complementaria ITC-BT-04</a></li>
+                <li><a href="#proyecto-vs-mtd">Criterios de obligatoriedad: Proyecto Técnico vs Memoria Técnica de Diseño (MTD)</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <span class="badge">Tema 2</span>
+            <h3>Representación Gráfica y Normalización</h3>
+            <p>Formatos, simbología y tipos de documentos gráficos utilizados en proyectos eléctricos.</p>
+            <ul class="key-skills">
+                <li><a href="#formatos-din">Formatos normalizados de la Serie DIN A (A0 a A10)</a></li>
+                <li><a href="#tipos-lineas">Tipos de líneas técnicas y formas de acotación normalizadas</a></li>
+                <li><a href="#esquemas-clasificacion">Clasificación: Planos, Esquemas (Unifilar/Multifilar) y Croquis</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <span class="badge">Tema 3</span>
+            <h3>Estructura y Cuadros de Protección</h3>
+            <p>Componentes de la red y dispositivos de seguridad del Cuadro General de Mando y Protección.</p>
+            <ul class="key-skills">
+                <li><a href="#recorrido-energia">Elementos de distribución: Desde la Acometida hasta las Derivaciones Individuales</a></li>
+                <li><a href="#dispositivos-cgmp">Dispositivos de protección eléctrica (ICP, IGA, ID, PIAs)</a></li>
+                <li><a href="#grados-electrificacion">Circuitos interiores según Grados de Electrificación (Básico y Elevado)</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <span class="badge">Tema 4</span>
+            <h3>Conexión a Red, Acometidas y CGP</h3>
+            <p>Parámetros técnicos de enlace con la compañía distribuidora y cajas de protección.</p>
+            <ul class="key-skills">
+                <li><a href="#puntos-conexion">Tipos de conexión: Centro de Transformación y Red de Distribución de BT</a></li>
+                <li><a href="#acometida-materiales">Características de la acometida: Secciones y uso de aluminio</a></li>
+                <li><a href="#cgp-fusibles">Caja General de Protección (CGP) y cálculo de intensidad de cartuchos</a></li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- Sección de Desarrollo Completo -->
+    <section class="details-container">
+        
+        <h2 class="section-title">Desarrollo Completo del Temario</h2>
+
+        <!-- DESARROLLO TEMA 1 -->
+        <div id="rebt-normativa" class="content-block">
+            <h2>Reglamento Electrotécnico de Baja Tensión (REBT 2002)</h2>
+            <p>El <strong>Reglamento Electrotécnico para Baja Tensión</strong> es la norma general de aplicación para la realización de instalaciones eléctricas en España. Fue publicado en el año <strong>2002</strong> en el BOE nº 224 de fecha 18 de septiembre de 2002 (Real Decreto 842/2002), y es de aplicación obligatoria desde el 18 de septiembre de 2003. Su principal cambio respecto al anterior reglamento de 1973 es la utilización de Normas de Referencia (UNE) y su estructura modular basada en artículos e Instrucciones Técnicas Complementarias (ITCs).</p>
+        </div>
+
+        <div id="itc-bt-04" class="content-block">
+            <h2>Instrucción Técnica Complementaria ITC-BT-04</h2>
+            <p>Denominada <strong>"Documentación y puesta en servicio de las instalaciones"</strong>, esta instrucción establece las condiciones administrativas y técnicas necesarias para la ejecución y legalización de cualquier instalación eléctrica. Determina los casos específicos en los que las instalaciones deben ejecutarse obligatoriamente sobre la base de un <strong>Proyecto Técnico</strong> redactado y firmado por un técnico titulado competente, o si es suficiente con una <strong>Memoria Técnica de Diseño (MTD)</strong> que puede ser cumplimentada por el instalador autorizado.</p>
+        </div>
+
+        <div id="proyecto-vs-mtd" class="content-block">
+            <h2>Criterios de obligatoriedad: Proyecto Técnico vs MTD</h2>
+            <p>Cualquier instalación eléctrica en España debe contar de forma previa con un Proyecto o una MTD según los límites de potencia e importancia fijados por el reglamento:</p>
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>Grupo / Tipo de Instalación</th>
+                        <th>Límites de Potencia Requeridos para Proyecto Técnico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Grupo A:</strong> Industrias en general</td>
+                        <td>P &gt; 20 kW</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo B:</strong> Locales húmedos, polvorientos o con riesgo de corrosión; bombas de agua</td>
+                        <td>P &gt; 10 kW</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo C:</strong> Locales mojados, generadores y convertidores</td>
+                        <td>P &gt; 10 kW</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo D:</strong> Instalaciones de carácter temporal en obras u emplazamientos abiertos</td>
+                        <td>P &gt; 50 kW</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo E:</strong> Edificios destinados principalmente a viviendas, locales comerciales u oficinas sin pública concurrencia</td>
+                        <td>P &gt; 100 kW por caja general de protección</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo F:</strong> Viviendas unifamiliares</td>
+                        <td>P &gt; 50 kW</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo G:</strong> Garajes con ventilación forzada</td>
+                        <td>Cualquiera que sea su ocupación (Sin límite)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo H:</strong> Garajes con ventilación natural</td>
+                        <td>De más de 5 plazas de estacionamiento</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo I:</strong> Locales de pública concurrencia</td>
+                        <td>Sin límite de potencia (Siempre requiere proyecto)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo K:</strong> Alumbrado exterior</td>
+                        <td>P &gt; 5 kW</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo L:</strong> Locales con riesgo de incendio o explosión (excepto garajes)</td>
+                        <td>Sin límite de potencia (Siempre requiere proyecto)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo M:</strong> Quirófanos y salas de intervención</td>
+                        <td>Sin límite de potencia (Siempre requiere proyecto)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grupo N:</strong> Piscinas y fuentes</td>
+                        <td>P &gt; 5 kW</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="table-note"><em>Nota sobre promociones de viviendas:</em> Una construcción nueva de un conjunto de viviendas (por ejemplo, 5 viviendas unifamiliares con grado de electrificación elevada) se tramita mediante Proyecto Técnico debido a que la instalación común y la previsión de cargas del conjunto del edificio vertical u horizontal superan los límites de la caja general de protección o forman una única unidad de promoción técnica.</p>
+        </div>
+
+        <!-- DESARROLLO TEMA 2 -->
+        <div id="formatos-din" class="content-block">
+            <h2>Formatos Normalizados de la Serie DIN A</h2>
+            <p>Los planos de los proyectos eléctricos deben adaptarse estrictamente a los formatos normalizados por la serie A DIN. El formato base es el <strong>A0</strong>, que corresponde a una hoja rectangular de 1 m² de superficie, manteniendo siempre una relación de lados de √2 (1189 x 841 mm). Cada formato inmediato inferior se obtiene dividiendo el anterior exactamente por la mitad de su lado de mayor longitud:</p>
+            <ul>
+                <li><strong>A0:</strong> 841 mm x 1189 mm</li>
+                <li><strong>A1:</strong> 594 mm x 841 mm</li>
+                <li><strong>A2:</strong> 420 mm x 594 mm</li>
+                <li><strong>A3:</strong> 297 mm x 420 mm</li>
+                <li><strong>A4:</strong> 210 mm x 297 mm</li>
+                <li><strong>A5:</strong> 148 mm x 210 mm</li>
+                <li><strong>A6:</strong> 105 mm x 148 mm</li>
+            </ul>
+        </div>
+
+        <div id="tipos-lineas" class="content-block">
+            <h2>Tipos de Líneas Técnicas y Formas de Acotación</h2>
+            <p>La normalización del dibujo técnico regulada en España bajo la norma UNE-EN ISO 3098 define los tipos de líneas según su función gráfica en los planos:</p>
+            <ul>
+                <li><strong>Líneas continuas gruesas:</strong> Utilizadas para contornos, aristas visibles y los objetos principales del dibujo como trayectos de líneas eléctricas, puntos de suministro, iluminación y leyendas.</li>
+                <li><strong>Líneas de trazos gruesos:</strong> Empleadas para representar aristas ocultas.</li>
+                <li><strong>Líneas de trazo y punto fino:</strong> Utilizadas para marcar los ejes de simetría o líneas centrales de cavidades.</li>
+                <li><strong>Líneas auxiliares de cota y referencia:</strong> Líneas finas continuas que no pertenecen al modelo en sí, empleadas para indicar las dimensiones físicas del objeto o distancias.</li>
+                <li><strong>Líneas virtuales (o líneas fantasma):</strong> Líneas imaginarias empleadas para indicar posiciones diferentes de un mismo objeto con movimiento (por ejemplo, la apertura de las puertas de los cuadros eléctricos).</li>
+            </ul>
+        </div>
+
+        <div id="esquemas-clasificacion" class="content-block">
+            <h2>Clasificación: Planos, Esquemas y Croquis</h2>
+            <p>La documentación técnica se divide según el grado de detalle, precisión y escala de la representación:</p>
+            <ul>
+                <li><strong>Plano:</strong> Representación esquemática detallada con acotaciones y leyendas, en dos dimensiones y a una determinada escala real sobre la base de la estructura del edificio. Las escalas habituales en edificación suelen ser de reducción normalizadas como 1/20, 1/50 y 1/100 para detalles, y 1/100, 1/200 o 1/500 según el tamaño del edificio. El principio fundamental que deben cumplir es la <strong>legibilidad</strong> (espaciado entre caracteres igual a dos veces el ancho de línea).</li>
+                <li><strong>Esquema:</strong> Representación gráfica simbólica de la estructura de la instalación. A diferencia de los planos, los esquemas no tienen escala ni se dibujan sobre la base física del edificio; responden únicamente a cómo se conecta la instalación.
+                    <ul>
+                        <li><em>Esquema unifilar:</em> El más utilizado por su simplicidad. Representa las líneas y elementos con un solo trazo, indicando mediante marcas el número de conductores en paralelo.</li>
+                        <li><em>Esquema multifilar:</em> Representa de forma real todos y cada uno de los conductores que viajan en paralelo en cada trayecto.</li>
+                    </ul>
+                </li>
+                <li><strong>Croquis:</strong> Diseño ligero a mano alzada, sin precisión ni detalles, que ilustra las ideas generales de los trayectos reales a cumplir de forma comprensible, muy común para acompañar documentos simplificados como las MTD.</li>
+            </ul>
+        </div>
+
+        <!-- DESARROLLO TEMA 3 -->
+        <div id="recorrido-energia" class="content-block">
+            <h2>Elementos de Distribución Eléctrica</h2>
+            <p>El recorrido de la energía desde la red pública exterior hasta la vivienda u oficina consta de los siguientes componentes ordenados de manera secuencial:</p>
+            <ol>
+                <li><strong>Línea de acometida:</strong> Conecta la red de distribución de la compañía eléctrica con la Caja General de Protección del edificio.</li>
+                <li><strong>Caja General de Protección (CGP):</strong> Aloja los elementos de protección (fusibles) para la posterior línea general. Protege contra posibles cortocircuitos en la red.</li>
+                <li><strong>Línea General de Alimentación (LGA) o línea repartidora:</strong> Enlace eléctrico que conecta la CGP con el cuarto destinado a la centralización de contadores.</li>
+                <li><strong>Centralización de contadores:</strong> Conjunto de elementos encargados de medir y registrar de forma individualizada el consumo de energía de cada abonado.</li>
+                <li><strong>Derivaciones individuales:</strong> Líneas que parten del contador de cada abonado e introducen la corriente de forma independiente a cada vivienda o local.</li>
+                <li><strong>Cuadro General de Mando y Protección (CGMP):</strong> Ubicado en el interior del inmueble, es el inicio de la instalación eléctrica interior y aloja los dispositivos de mando, control y seguridad.</li>
+            </ol>
+        </div>
+
+        <div id="dispositivos-cgmp" class="content-block">
+            <h2>Dispositivos de Protección del Cuadro General (CGMP)</h2>
+            <p>El cuadro eléctrico se sitúa en la entrada de la vivienda y contiene los siguientes interruptores de seguridad:</p>
+            <ul>
+                <li><strong>ICP (Interruptor de Control de Potencia):</strong> Controla que el consumo total no supere la potencia en kW contratada con la compañía eléctrica. Tradicionalmente instalado en el cuadro, hoy en día se integra digitalmente en los nuevos contadores de telegestión.</li>
+                <li><strong>IGA (Interruptor General Automático):</strong> Interruptor magnetotérmico principal que vigila que la corriente demandada no supere la capacidad física de los cables generales de la casa. Corta el suministro completo ante sobrecargas masivas o cortocircuitos generales para evitar incendios.</li>
+                <li><strong>ID (Interruptor Diferencial):</strong> Dispositivo electromecánico clave para proteger la vida de las personas contra descargas eléctricas o electrocuciones por contactos directos o indirectos. Reconocible por su botón de "Test" (T), funciona midiendo de forma constante la igualdad entre la corriente entrante y saliente, cortando instantáneamente la luz si detecta una fuga de corriente a tierra.</li>
+                <li><strong>PIAs (Pequeños Interruptores Automáticos):</strong> Dispositivos magnetotérmicos individuales destinados a proteger de forma independiente cada uno de los circuitos de la instalación interior contra sobrecargas locales y cortocircuitos.</li>
+            </ul>
+        </div>
+
+        <div id="grados-electrificacion" class="content-block">
+            <h2>Circuitos según Grados de Electrificación</h2>
+            <p>El REBT divide el diseño de la instalación interior de las viviendas en dos clasificaciones básicas en función de la superficie útil de la vivienda y la previsión de electrodomésticos:</p>
+            
+            <h3>1. Grado de Electrificación Básico</h3>
+            <p>Obligatorio para cubrir las necesidades primarias de utilización. Se aplica cuando la potencia máxima admisible es menor o igual a <strong>9.200 W</strong>. Debe contar obligatoriamente con los siguientes 5 circuitos independientes:</p>
+            <ul>
+                <li><strong>C1:</strong> Circuito destinado a alimentar los puntos de iluminación interior.</li>
+                <li><strong>C2:</strong> Circuito destinado a tomas de corriente de uso general y para el frigorífico.</li>
+                <li><strong>C3:</strong> Circuito destinado a alimentar de forma exclusiva la cocina eléctrica y el horno.</li>
+                <li><strong>C4:</strong> Circuito destinado a alimentar la lavadora, el lavavajillas y el termo eléctrico.</li>
+                <li><strong>C5:</strong> Circuito destinado a alimentar las tomas de corriente de los cuartos de baño, así como las bases auxiliares de la cocina.</li>
+            </ul>
+
+            <h3>2. Grado de Electrificación Elevado</h3>
+            <p>Es obligatorio en viviendas con una superficie útil superior a <strong>160 m²</strong>, o cuando exista previsión de instalar sistemas de calefacción eléctrica, aire acondicionado, automatización, gestión de la energía o una cantidad importante de electrodomésticos que obliguen a doblar circuitos. Instala, además de los cinco circuitos básicos, los siguientes:</p>
+            <ul>
+                <li><strong>C6:</strong> Circuito adicional del tipo C1 (iluminación) por cada 30 puntos de luz adicionales.</li>
+                <li><strong>C7:</strong> Circuito adicional del tipo C2 (tomas de corriente) por cada 20 tomas de uso general adicionales o si la superficie supera los 160 m².</li>
+                <li><strong>C8:</strong> Circuito destinado a la instalación de calefacción eléctrica.</li>
+                <li><strong>C9:</strong> Circuito destinado a la instalación de aire acondicionado.</li>
+                <li><strong>C10:</strong> Circuito destinado a la alimentación de una secadora independiente.</li>
+                <li><strong>C11:</strong> Circuito destinado al sistema de automatización, gestión técnica de la energía y seguridad.</li>
+                <li><strong>C12:</strong> Circuitos adicionales de los tipos C3 o C4, o un circuito adicional C5 cuando el número de tomas de corriente en el baño o cocina exceda de 6.</li>
+            </ul>
+        </div>
+
+        <!-- DESARROLLO TEMA 4 -->
+        <div id="puntos-conexion" class="content-block">
+            <h2>Tipos de Conexión y Puntos de Enlace</h2>
+            <p>El punto de conexión es el lugar físico otorgado por la empresa distribuidora para el enganche de nuestro suministro eléctrico en Baja Tensión. Se clasifican de la siguiente manera:</p>
+            <ul>
+                <li><strong>Conexión directa a un cuadro de BT en el interior de un Centro de Transformación:</strong> Se da para suministros de cierta envergadura o cuando se conecta un grupo colectivo de contadores. Si el CT es propiedad de la compañía dentro del edificio, la CGP se ubicará lo más cerca posible al límite de la propiedad.</li>
+                <li><strong>Punto de conexión de Red de Distribución de Baja Tensión:</strong> Conexión típica para viviendas unifamiliares en zonas urbanizadas o locales comerciales que se enlazan directamente a arquetas o redes aéreas/subterráneas existentes de la compañía en la vía pública.</li>
+            </ul>
+            <p>Según el tendido de los cables, las conexiones pueden ser de tipo <strong>Aérea</strong> (redes posadas en fachadas), <strong>Redes enterradas</strong> (canalizaciones por tubos subterráneos desde la CGP al punto de red de distribución) e <strong>Interior</strong> (cuando la conexión se efectúa enteramente dentro de un edificio propiedad de la comunidad o titular).</p>
+        </div>
+
+        <div id="acometida-materiales" class="content-block">
+            <h2>Características Técnicas de la Acometida</h2>
+            <p>La sección del conductor empleado en la línea de acometida se calcula según la carga total prevista. En los casos típicos normalizados para redes de distribución se emplean secciones normalizadas de <strong>95 mm²</strong>, <strong>120 mm²</strong> y <strong>240 mm²</strong>.</p>
+            <p>En la actualidad, la inmensa mayoría de las acometidas exteriores se realizan utilizando el <strong>aluminio</strong> como material conductor principal. Para conductores de secciones elevadas o de gran entidad, la rentabilidad económica del aluminio es significativamente mayor que la del cobre debido a su menor coste por peso, aunque existen casos específicos de menor longitud o interiores donde se permite el uso del cobre.</p>
+        </div>
+
+        <div id="cgp-fusibles" class="content-block">
+            <h2>Caja General de Protección (CGP) y Fusibles</h2>
+            <p>El tipo de CGP se selecciona de acuerdo con las especificaciones técnicas homologadas por la compañía suministradora de la zona. En casos simplificados para un único usuario o dos usuarios alimentados desde el mismo lugar, la normativa permite integrar la caja general de protección y el equipo de medida en un único elemento compacto denominado <strong>caja de protección y medida (CPM)</strong>.</p>
+            <p>Para la correcta coordinación de protecciones y seguridad de las líneas generales de alimentación situadas aguas abajo, la intensidad nominal de diseño del fusible o cartucho debe cumplir estrictamente la siguiente regla matemática de dimensionamiento:</p>
+            <div class="formula-box">
+                <p><strong>In cartucho ≤ In base</strong></p>
+                <p>Y simultáneamente: <strong>In cartucho ≤ Imáx LGA</strong></p>
+            </div>
+            <p>Donde <em>In cartucho</em> es la intensidad del fusible protector, <em>In base</em> representa la intensidad nominal que soporta físicamente la base portafusibles de la CGP, e <em>Imáx LGA</em> representa la intensidad máxima admisible por el cable conductor de la Línea General de Alimentación sin sufrir daños por calentamiento.</p>
+        </div>
+
+    </section>
+
+    <!-- Botón flotante para Volver Arriba -->
+    <button id="backToTopBtn" onclick="scrollToTop()" title="Volver arriba">↑</button>
+
+    <footer class="main-footer">
+        <p>MF1180 - Material Técnico Educativo de Organización del Montaje © 2026</p>
+	<p>José Jaime Fajardo Jiménez - Octubre de 2026</p> 
+    </footer>
+	
+   <!-- <footer class="main-footer">
+        <p>José Jaime Fajardo Jiménez - Octubre de 2026</p> -->
+    </footer>
+
+
+    <script>
+        // Función para el Buscador Dinámico en tiempo real
+        function searchTerms() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let contentBlocks = document.querySelectorAll(".content-block, .card");
+
+            contentBlocks.forEach(block => {
+                // Eliminar marcas previas
+                removeHighlights(block);
+
+                if (input === "") {
+                    // Si el buscador está vacío, restaurar visibilidad y diseño original
+                    block.style.display = "";
+                    block.style.opacity = "1";
+                    return;
+                }
+
+                let text = block.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    block.style.display = "";
+                    block.style.opacity = "1";
+                    highlightText(block, input);
+                } else {
+                    // Si se está buscando y el bloque no coincide, atenuar o esconder
+                    if (block.classList.contains("card")) {
+                        block.style.opacity = "0.25"; // Atenuar tarjetas no coincidentes
+                    } else {
+                        block.style.display = "none"; // Ocultar bloques de contenido no coincidentes
+                    }
+                }
+            });
+        }
+
+        // Función para resaltar el texto usando etiquetas <mark> sin romper el HTML
+        function highlightText(element, textToHighlight) {
+            let innerHTML = element.innerHTML;
+            let index = innerHTML.toLowerCase().indexOf(textToHighlight);
+            
+            // Protección básica para no reemplazar texto dentro de etiquetas HTML (atributos, etc.)
+            let regex = new RegExp("(" + escapeRegExp(textToHighlight) + ")(?![^<]*>)", "gi");
+            element.innerHTML = innerHTML.replace(regex, "<mark>$1</mark>");
+        }
+
+        // Función para limpiar los resaltados anteriores
+        function removeHighlights(element) {
+            let marks = element.querySelectorAll("mark");
+            marks.forEach(mark => {
+                let parent = mark.parentNode;
+                parent.replaceChild(document.createTextNode(mark.textContent), mark);
+                parent.normalize(); // Consolida nodos de texto adyacentes
+            });
+        }
+
+        // Escapar caracteres especiales para la expresión regular de búsqueda
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        // Lógica del botón flotante para Volver Arriba
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            let btn = document.getElementById("backToTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

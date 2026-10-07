@@ -1,0 +1,382 @@
+/* Paleta de colores técnica y tipografía corporativa */
+:root {
+    --primary-color: #1e3a8a;      /* Azul técnico oscuro */
+    --secondary-color: #3b82f6;    /* Azul brillante corporativo */
+    --background-bg: #f8fafc;       /* Gris pizarra muy claro */
+    --card-bg: #ffffff;             /* Blanco puro */
+    --text-main: #334155;           /* Gris oscuro para lectura */
+    --text-light: #64748b;          /* Gris medio */
+    --accent-badge: #e0f2fe;        /* Azul cielo claro para distintivos */
+    --accent-badge-text: #0369a1;   /* Azul intenso para texto del distintivo */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-bg);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+/* Encabezado Principal */
+.main-header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.main-header p {
+    font-size: 1.1rem;
+    color: #93c5fd;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Barra de búsqueda flotante fijada en la parte superior central */
+.search-container-floating {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 90%;
+    max-width: 500px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+.search-container-floating input {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 30px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.search-container-floating input:focus {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.25);
+}
+
+/* Ajuste de margen superior para que el contenido no quede oculto bajo la barra flotante */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 60px auto 40px auto;
+    padding: 0 20px;
+}
+
+/* Estilo de Tarjetas ("Cards") */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 14px;
+    padding: 30px 24px 24px 24px;
+    position: relative;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Distintivos ("Badges") de las tarjetas */
+.badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: var(--accent-badge);
+    color: var(--accent-badge-text);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    padding-right: 60px; /* Evitar solapamiento con el badge */
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+/* Enlaces internos de ideas principales */
+.key-skills {
+    list-style: none;
+}
+
+.key-skills li {
+    margin-bottom: 12px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.key-skills li::before {
+    content: "•";
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.key-skills a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.key-skills a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Contenedor de Detalles del Temario */
+.details-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
+}
+
+/* Bloques de Contenido de Desarrollo */
+.content-block {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+    scroll-margin-top: 100px; /* Espacio para que al saltar no quede tapado por la barra flotante */
+}
+
+.content-block h2 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 12px;
+}
+
+.content-block h3 {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin: 20px 0 10px 0;
+}
+
+.content-block p {
+    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.content-block ul, .content-block ol {
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+
+.content-block li {
+    margin-bottom: 8px;
+}
+
+/* Tablas Técnicas Normalizadas */
+.tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+}
+
+.tech-table th, .tech-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tech-table th {
+    background-color: #f1f5f9;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.tech-table tr:hover {
+    background-color: #f8fafc;
+}
+
+.table-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: -8px;
+}
+
+/* Fórmulas y Cajas de Destacados */
+.formula-box {
+    background-color: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.05rem;
+    color: #14532d;
+}
+
+/* Marcado de Texto del Buscador */
+mark {
+    background-color: #fef08a; /* Amarillo suave */
+    color: #000000;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* Botón Flotante Volver Arriba */
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    padding: 14px 18px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#backToTopBtn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Pie de Página */
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #1e293b;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 50px;
+}
+/* VARIABLES DE DISEÑO PARAMETRIZADAS (TEMAS INTERCAMBIABLES) */
+:root {
+    --bg-primary: #f4f6f9;
+    --text-main: #1f2937;
+    --card-bg: #ffffff;
+    --primary-blue: #1e3a8a;
+    --accent-blue: #3b82f6;
+    --border-color: #e5e7eb;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --text-main: #f1f5f9;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+    --primary-blue: #3b82f6;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding-top: 80px; /* Separación fija para que la barra flotante no tape contenidos */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* BARRA DE HERRAMIENTAS FLOTANTE FIJA */
+.floating-toolbar {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+[data-theme="dark"] .floating-toolbar {
+    background: rgba(30, 41, 59, 0.85);
+}
+
+/* MARGEN DE OFFSET PARA SALTOS DE ENLACES INTERNOS */
+.content-block {
+    scroll-margin-top: 100px; /* Evita que la barra tape los encabezados al saltar */
+    padding: 25px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+/* CALCULADORA Y DICTÁMENES */
+.calculator-block {
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(59, 130, 246, 0.03) 100%);
+}
+
+.dictamen-alert {
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.alert-danger { background-color: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid #ef4444; }
+.alert-success { background-color: rgba(34, 197, 94, 0.15); color: #22c55e; border: 1px solid #22c55e; }
+
+/* (El resto de clases de la cuadrícula adaptativa, badges y botón flotante están completamente desarrolladas en el archivo físico guardado) */
