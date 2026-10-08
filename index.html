@@ -20,6 +20,42 @@
 
     <!-- Sección de Tarjetas Resumen (Ideas Principales) -->
     <main class="dashboard-container">
+
+
+<!-- Tarjeta de Enlaces de Interés Bibliografía -->
+<div class="card">
+  <span class="badge">Bibliografía</span>
+  <h3>Documentación y Enlaces Oficiales</h3>
+  <p>Acceso directo a la normativa vigente, guías de aplicación y recursos técnicos sobre la ITC-BT-12.</p>
+  
+  <ul class="key-skills">
+    <li>
+      <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099#a1" target="_blank" rel="noopener noreferrer">
+        Real Decreto 842/2002, de 2 de agosto, por el que se aprueba el Reglamento electrotécnico para baja tensión.
+      </a>
+    </li>
+    <li>
+      <a href="https://normatia.com/es/normativa/rebt/2025/itc-bt-12-instalaciones-de-enlace-esquemas/" target="_blank" rel="noopener noreferrer">
+        Guía Técnica de Aplicación de la ITC-BT-12
+      </a>
+    </li>
+    <li>
+      <a href="https://direct-electro.es" target="_blank" rel="noopener noreferrer">
+        ITC-BT-12 de Direct-Electro
+      </a>
+    </li>
+    <li>
+      <a href="https://plcmadrid.es" target="_blank" rel="noopener noreferrer">
+        Recursos Interactivos - PLC Madrid
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
         
         <div class="card">
             <span class="badge">Tema 1</span>
@@ -253,8 +289,28 @@
                 <li><strong>Conexión directa a un cuadro de BT en el interior de un Centro de Transformación:</strong> Se da para suministros de cierta envergadura o cuando se conecta un grupo colectivo de contadores. Si el CT es propiedad de la compañía dentro del edificio, la CGP se ubicará lo más cerca posible al límite de la propiedad.</li>
                 <li><strong>Punto de conexión de Red de Distribución de Baja Tensión:</strong> Conexión típica para viviendas unifamiliares en zonas urbanizadas o locales comerciales que se enlazan directamente a arquetas o redes aéreas/subterráneas existentes de la compañía en la vía pública.</li>
             </ul>
-            <p>Según el tendido de los cables, las conexiones pueden ser de tipo <strong>Aérea</strong> (redes posadas en fachadas), <strong>Redes enterradas</strong> (canalizaciones por tubos subterráneos desde la CGP al punto de red de distribución) e <strong>Interior</strong> (cuando la conexión se efectúa enteramente dentro de un edificio propiedad de la comunidad o titular).</p>
-        </div>
+
+<p>Los tipos de conexión que pueden darse se clasifican según sean:</p>
+
+<ul>
+  <li>
+    <strong>Aérea:</strong> Para aquellos lugares donde existan redes aéreas posadas en fachadas o similares. 
+    También para aquellos casos donde la acometida viaje de forma aérea hasta el propio centro de transformación, 
+    siempre y cuando esté permitido por la compañía la entrada aérea al Centro de Transformación o este sea de tipo abonado. 
+    Lo habitual en casos de conexiones al CT será que la red sea de tipo mixto aéreo/enterrado, para que su entrada al 
+    centro de transformación se realice desde canalización enterrada.
+  </li>
+  <li>
+    <strong>Redes enterradas:</strong> Son aquellas redes donde la acometida circula por tubos enterrados desde la 
+    CGP hasta el punto de conexión, sea este a un centro de transformación o a un punto de la red de distribución 
+    de baja tensión de la compañía.
+  </li>
+  <li>
+    <strong>Interior:</strong> Se da cuando la conexión de la instalación a desarrollar se realiza dentro del 
+    edificio propiedad del titular o comunidad.
+  </li>
+</ul>
+
 
         <div id="acometida-materiales" class="content-block">
             <h2>Características Técnicas de la Acometida</h2>
@@ -283,11 +339,6 @@
 	<p>José Jaime Fajardo Jiménez - Octubre de 2026</p> 
     </footer>
 	
-   <!-- <footer class="main-footer">
-        <p>José Jaime Fajardo Jiménez - Octubre de 2026</p> -->
-    </footer>
-
-
     <script>
         // Función para el Buscador Dinámico en tiempo real
         function searchTerms() {
